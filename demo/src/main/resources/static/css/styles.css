@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body{
+    font-family: Helvetica;
+    -webkit-font-smoothing: antialiased;
+    background: white;
+}
+
+h2{
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    padding: 30px 0;
+}
+
+h1{
+    margin: 10px auto;
+}
+
+/* Table Styles */
+
+.table-wrapper{
+    margin: 12px auto;
+    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+}
+
+table {
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: normal;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+    text-align: center;
+}
+
+thead th {
+    color: #ffffff;
+    background: navy;
+    padding: 12px;
+}
+
+tbody td {
+    padding: 6px;
+}
+
+tbody tr:nth-child(odd) {
+    color: black;
+    background: lightgrey;
+}
+
+.fl-table tr:nth-child(even) {
+    background: #F8F8F8;
+}
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Issues</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Github Repository Issues</h1>
+    <a href="/"><h3>BACK TO HOME</h3></a>
+
+    <div class="table-wrapper">
+        <table class="sortable">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>NUMBER</th>
+                <th>TITLE</th>
+                <th>URL</th>
+                <th>STATE</th>
+                <th>LOCKED</th>
+                <th>CREATED</th>
+                <th>UPDATED</th>
+                <th>CLOSED</th>
+                <th>CREATOR</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr th:each="issue : ${issues}">
+                <td th:text="${issue.getId()}">ID</td>
+                <td th:text="${issue.getNumber()}">NUMBER</td>
+                <td><a th:text="${issue.getTitle()}" href="${issue.getHtml_url()}">TITLE</a></td>
+                <td th:text="${issue.getHtml_url()}">URL</td>
+                <td th:text="${issue.getState()}">STATE</td>
+                <td th:text="${issue.getLocked()}">LOCKED</td>
+                <td th:text="${issue.getCreated_at()}">CREATED</td>
+                <td th:text="${issue.getUpdated_at()}">UPDATED</td>
+                <td th:text="${issue.getClosed_at()}">CLOSED</td>
+                <td th:text="${issue.getUsername()}">CREATOR</td>
+
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+</body>
+</html>
